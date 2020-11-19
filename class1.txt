@@ -1,0 +1,82 @@
+> year <- 2020
+> year
+[1] 2020
+> name <- "R프로그래밍"
+> name
+[1] "R프로그래밍"
+> sprts.name <- "football"
+> sports.number <- 11
+> sports.time <- 90
+> sports.number
+[1] 11
+> sports
+에러: 객체 'sports'를 찾을 수 없습니다
+> sports.name
+에러: 객체 'sports.name'를 찾을 수 없습니다
+> sports.name
+에러: 객체 'sports.name'를 찾을 수 없습니다
+> sports.name <- "foolball"
+> sports.name
+[1] "foolball"
+> 
+> 
+> 
+> names <- c("R프로그래밍","파이썬","자바","빅테이터")
+> names
+[1] "R프로그래밍" "파이썬"      "자바"        "빅테이터"   
+> 
+> 
+> is.character(year)
+[1] FALSE
+> 
+> result <- is.numeric(year)
+> result
+[1] TRUE
+> 
+> value <- c(2,3,4)
+> result <- as.numeric(value) * 3
+> result
+[1]  6  9 12
+> 
+> animal <- c("토끼","거북이", "토끼", "거북이","토끼")
+> Nanimal <- as.factor(animal)
+> table(Nanimal)
+Nanimal
+거북이   토끼 
+     2      3 
+> 
+> mode(Nanimal)
+[1] "numeric"
+> 
+> class(Nanimal)
+[1] "factor"
+> 
+> Oanimal <- factor(animal, levels = c("거북이","토끼"), orddered = T)
+Error in factor(animal, levels = c("거북이", "토끼"), orddered = T) : 
+  사용되지 않은 인자 (orddered = T)
+> Oanimal <- factor(animal, levels = c("거북이","토끼"), ordered = T)
+> par(mfrow = c(1,2))
+> plot(Nanimal)
+> plot(Oanimal)
+> 
+> 
+> 
+> strptime("30-12-2050", format = ("%d-%m-%Y"))
+[1] "2050-12-30 KST"
+> setwd("c:/workspace/rwork")
+> getwd()
+[1] "c:/workspace/rwork"
+> dir()
+character(0)
+> write.csv(value, "sample.csv")
+> 
+> 
+> data <- read.csv("sample.csv", header = F)
+> data
+  V1 V2
+1 NA  x
+2  1  2
+3  2  3
+4  3  4
+> dir()
+[1] "sample.csv"
